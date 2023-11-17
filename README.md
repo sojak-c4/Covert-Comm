@@ -12,10 +12,19 @@ These morse characters are assigned three different time periods ("." = ~0.5s, "
 The receivers code will measure the time and translate the delays back into morse charaters. The code will then translate the morse characters back into plain text and the receiver will get an output of the message on their terminal.
 
 ## How To Use
+### To Use as Python Code
+1. Open 2 terminal instances. can both be on the same computer or on different computers on the same network. Terminal instances should be in the directory where the code is located.
+2. On the receiving terminal run `python3 main.py -m receive`
+3. Follow the prompts and type in the IP and port you are receiving on (e.g. 127.0.0.1:8080).
+4. Enter a timeout time for how long the receiver will stay open and wait for a connection.
+5. On the sender terminal run `python3 main.py -m send`
+6. Type in the IP of the computer that you will be sending a message to (the receiver terminal's computer)
+7. Type in your message when prompted and hit enter.
+8. Wait for the message to fully finish on both terminals before closing the terminal. Partial messages are not possible. It is recommended to keep messages brief.
 
 ### To Generate An Executable
 
-An ubuntu linux executable is included ("systemd_gui"), however, if you are running on a different system you will need to generate your own with Pyinstaller.
+An ubuntu Linux executable is included ("systemd_gui"), however, if you are running on a different system you will need to generate your own with Pyinstaller.
 
 - To do this pip install pyinstaller
   - ($ pip install pyinstaller)
@@ -23,7 +32,7 @@ An ubuntu linux executable is included ("systemd_gui"), however, if you are runn
   - ($ pyinstaller --onefile main.py -n <"optional blendy name">)
 - The executable is saved in the ./dist folder
 
-### To Use The Executable
+#### To Use The Executable
 
 Run the covert channel executable with either receiver or sender mode flags
 
