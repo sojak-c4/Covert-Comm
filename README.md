@@ -36,6 +36,9 @@ After the receiver is run, the sender can run the executable. They will be promp
 
 After the sender sends their message the receiver will start to receive TCP packets, the receiver must wait until the message is fully sent and they receive the output on their terminal. This may take a long time depending on the message length.
 
+## Credits
+Written as part of a 3-person group.
+
 # Citations
 
 Morse Code Function: GeeksToGeeks [https://www.geeksforgeeks.org/morse-code-translator-python/]()
